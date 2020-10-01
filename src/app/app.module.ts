@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { MobileHomeComponent } from './mobile-home/mobile-home.component';
 import { MobileWipComponent } from './mobile-wip/mobile-wip.component';
 import { MobileHeaderComponent } from './mobile-header/mobile-header.component';
+import { MobileContactsComponent } from './mobile-contacts/mobile-contacts.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MobileHeaderComponent } from './mobile-header/mobile-header.component';
     HomeComponent,
     MobileHomeComponent,
     MobileWipComponent,
-    MobileHeaderComponent
+    MobileHeaderComponent,
+    MobileContactsComponent
   ],
   imports: [
     BrowserModule,

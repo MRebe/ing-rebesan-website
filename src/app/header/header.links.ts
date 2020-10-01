@@ -12,12 +12,12 @@ export const links: Link[] = [
   },
   {
     label: 'Rendering',
-    path: 'WIP',
+    path: 'Rendering',
     isActive: false
   },
   {
     label: 'Calcoli',
-    path: 'WIP',
+    path: 'Calcoli',
     isActive: false
   },
   {

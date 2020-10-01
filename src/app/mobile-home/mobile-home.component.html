@@ -1,1 +1,19 @@
-<p>mobile-home works!</p>
+<img *ngIf="swapImg1" class="ir-mobile-img-template-img" [src]="swapImg1" [@fade]/>
+<img *ngIf="swapImg2" class="ir-mobile-img-template-img" [src]="swapImg2" [@fade]/>
+
+<div *ngIf="swapImg1" class="ir-mobile-img-template-text" [@fade]>
+  <div class="ir-mobile-img-template-text-title" >
+    {{selectedTemplate.title}}
+  </div>
+  <div class="ir-mobile-img-template-text-description">
+    {{selectedTemplate.description}}
+  </div>
+</div>
+<div *ngIf="swapImg2" class="ir-mobile-img-template-text" [@fade]>
+  <div class="ir-mobile-img-template-text-title">
+    {{selectedTemplate.title}}
+  </div>
+  <div class="ir-mobile-img-template-text-description">
+    {{selectedTemplate.description}}
+  </div>
+</div>

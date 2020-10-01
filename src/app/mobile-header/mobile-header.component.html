@@ -1,3 +1,24 @@
-<div class=".ir-menu">
-  <div class="ir-menu-logo" (click)="redirectToHome()">iRebesan</div>
+<div class="ir-menu">
+  <div class="ir-menu-icon" (click)="showMenu = true">MENU</div>
+  <div class="ir-menu-logo" (click)="redirectTo(null)">iRebesan</div>
+</div>
+
+<div class="ir-menu-window" [ngClass]="{'ir-menu-window-open': showMenu}">
+  <div class="ir-menu-window-close" (click)="showMenu = false">X</div>
+  <div class="ir-menu-window-logo">iRebesan</div>
+  <div class="ir-menu-window-list">
+    <div
+      class="ir-menu-window-list-item"
+      [ngClass]="{'ir-menu-window-list-item-active': isHome}"
+      (click)="redirectTo(null)">
+      Home
+    </div>
+    <div
+      *ngFor="let link of links"
+      class="ir-menu-window-list-item"
+      [ngClass]="{'ir-menu-window-list-item-active': link.isActive}"
+      (click)="redirectTo(link)">
+      {{link.label}}
+    </div>
+  </div>
 </div>

@@ -57,7 +57,11 @@ div {
 
 a {
   text-decoration: inherit;
-  margin: 0 5px;
+}
+
+.ir-additional-message {
+  font-size: 15px;
+  margin-left: 20px;
 }
 
 .ir-contacts-footer {
