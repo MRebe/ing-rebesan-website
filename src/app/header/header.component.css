@@ -33,11 +33,15 @@
 
 .ir-menu-logo {
   position: absolute;
-  left: 15px;
+  right: 40px;
   display: flex;
   align-items: center;
   height: 60px;
   font-size: 20px;
   letter-spacing: 0.15em;
   cursor: pointer;
+}
+
+.ir-menu-logo img {
+  height: 40px;
 }

@@ -29,6 +29,14 @@ div {
   font-weight: 300;
 }
 
+.ir-contacts-logo {
+  justify-content: center;
+}
+
+.ir-contacts-logo img {
+  height: 60px;
+}
+
 .ir-contacts-table {
   flex-direction: column;
   margin: 40px 20px;
@@ -67,7 +75,6 @@ a {
 .ir-contacts-footer {
   position: absolute;
   bottom: 0;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
@@ -80,4 +87,6 @@ a {
 
 .ir-contacts-footer-item {
   margin: 0 20px;
+  flex-direction: column;
+  justify-content: space-around;
 }

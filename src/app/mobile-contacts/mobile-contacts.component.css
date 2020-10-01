@@ -36,22 +36,21 @@ div {
 }
 
 .ir-mobile-contacts-name {
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   font-size: 25px;
   font-weight: 500;
 }
 
 .ir-mobile-contacts-item-box {
   justify-content: flex-start;
+  margin: 3px 0;
 }
 
 .ir-mobile-contacts-item-label {
-  margin: 5px 0;
   flex: 1;
 }
 
 .ir-mobile-contacts-item-value {
-  margin: 5px 0;
   font-weight: 500;
   flex: 3;
 }
@@ -62,7 +61,7 @@ a {
 
 .ir-additional-message {
   font-size: 12px;
-  margin: 10px;
+  margin: 5px 10px;
 }
 
 .ir-mobile-contacts-footer {
