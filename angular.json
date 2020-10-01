@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "ing-rebesan-website": {
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ing-rebesan-website",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -26,7 +26,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "localize": false
           },
           "configurations": {
             "production": {
@@ -118,7 +119,17 @@
             }
           }
         }
+      },
+      "i18n": {
+        "sourceLocale": "it-IT",
+        "locales": {
+          "en": "src/locale/messages.en.xlf"
+        }
       }
-    }},
-  "defaultProject": "ing-rebesan-website"
+    }
+  },
+  "defaultProject": "ing-rebesan-website",
+  "cli": {
+    "analytics": "6ee6f562-861c-4b0d-8c5a-aab76e78c575"
+  }
 }

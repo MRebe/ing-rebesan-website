@@ -1,0 +1,19 @@
+.ir-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 60px;
+  background: white;
+  z-index: 1;
+}
+
+.ir-menu-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 20px;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}

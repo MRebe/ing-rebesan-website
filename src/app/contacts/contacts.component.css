@@ -1,0 +1,79 @@
+div {
+  display: flex;
+}
+.ir-contacts-background-img {
+  background-color: white;
+  background-image: url('./../../assets/images/contacts_bck.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  height: calc(100vh - 60px); /* header height */
+}
+
+.ir-contacts-background-gradient {
+  flex-direction: column;
+  flex: 1;
+  background: transparent;
+  background: linear-gradient(300deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 50%);
+}
+
+.ir-contacts-title {
+  justify-content: center;
+  margin: 40px 0;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.ir-contacts-text {
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.ir-contacts-table {
+  flex-direction: column;
+  margin: 40px 20px;
+}
+
+.ir-contacts-name {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.ir-contacts-item-box {
+  justify-content: flex-start;
+}
+
+.ir-contacts-item-label {
+  margin: 5px;
+  flex: 1;
+}
+
+.ir-contacts-item-value {
+  margin: 5px;
+  font-weight: 500;
+  flex: 10;
+}
+
+a {
+  text-decoration: inherit;
+  margin: 0 5px;
+}
+
+.ir-contacts-footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100vw;
+  font-size: 12px;
+  font-weight: 200;
+  background-color: #444;
+  color: #fff;
+}
+
+.ir-contacts-footer-item {
+  margin: 0 20px;
+}

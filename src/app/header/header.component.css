@@ -1,0 +1,43 @@
+.ir-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 60px;
+  background: white;
+  z-index: 1;
+}
+
+.ir-menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 10px;
+  padding: 0 10px;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.ir-menu-item-active {
+  background-color: rgba(120, 120, 120, 0.4);
+}
+
+.ir-menu-item:hover {
+  background-color: rgba(120, 120, 120, 0.4);
+}
+
+.ir-menu-logo {
+  position: absolute;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 20px;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}

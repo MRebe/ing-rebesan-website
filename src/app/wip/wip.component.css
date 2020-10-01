@@ -1,0 +1,23 @@
+img {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+}
+
+.over {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 30%, rgba(255, 255, 255, 1) 100%);
+}
+
+.text {
+  position: absolute;
+  left: 50vw;
+  transform: translateX(-50%);
+  top: 10vh;
+  font-size: 40px;
+  font-weight: 600;
+}
+

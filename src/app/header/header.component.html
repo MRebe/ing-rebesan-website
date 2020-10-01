@@ -1,0 +1,10 @@
+<div class="ir-menu-logo" (click)="redirectTo(null)">iRebesan</div>
+<div class="ir-menu">
+  <div
+    *ngFor="let link of links"
+    class="ir-menu-item"
+    [ngClass]="{'ir-menu-item-active': link.isActive}"
+    (click)="redirectTo(link)">
+      {{link.label}}
+  </div>
+</div>
