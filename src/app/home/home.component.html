@@ -1,24 +1,26 @@
+<img class="ir-home-logo-big" src="assets/images/logo_big_alpha.png"/>
 
-<div class="ir-img-template">
-  <img class="ir-home-logo-big" src="assets/images/logo_big_alpha.png"/>
+<div class="ir-home">
 
-  <img *ngIf="swapImg1" [src]="swapImg1" [@fade]/>
-  <img *ngIf="swapImg2" [src]="swapImg2" [@fade]/>
-  <div class="ir-img-template-tilted" [@fade]></div>
-  <div *ngIf="swapImg1" class="ir-img-template-text-container" [@fade]>
-    <div class="ir-img-template-title">{{selectedTemplate.title}}</div>
-    <div class="ir-img-template-description">{{selectedTemplate.description}}</div>
+  <img class="ir-home-background-photo" *ngIf="swapImg1" [src]="swapImg1" [@fade]/>
+  <img class="ir-home-background-photo" *ngIf="swapImg2" [src]="swapImg2" [@fade]/>
+
+  <div class="ir-home-tilted-box" [@fade]></div>
+
+  <div *ngIf="swapImg1" class="ir-home-text-container" [@fade]>
+    <div class="ir-home-title">{{selectedTemplate.title}}</div>
+    <div class="ir-home-description">{{selectedTemplate.description}}</div>
   </div>
-  <div *ngIf="swapImg2" class="ir-img-template-text-container" [@fade]>
-    <div class="ir-img-template-title">{{selectedTemplate.title}}</div>
-    <div class="ir-img-template-description">{{selectedTemplate.description}}</div>
+  <div *ngIf="swapImg2" class="ir-home-text-container" [@fade]>
+    <div class="ir-home-title">{{selectedTemplate.title}}</div>
+    <div class="ir-home-description">{{selectedTemplate.description}}</div>
   </div>
 
-  <div class="ir-img-template-paginator">
+  <div class="ir-home-paginator">
     <div
       *ngFor="let t of [].constructor(templatesNumber); let i = index"
-      class="ir-img-template-paginator-item"
-      [ngClass]="{'ir-img-template-paginator-item-active': currentTemplateIndex === i}"
+      class="ir-home-paginator-item"
+      [ngClass]="{'ir-home-paginator-item-active': currentTemplateIndex === i}"
       (click)="switchTemplate(i)"
       [@fade]>
     </div>

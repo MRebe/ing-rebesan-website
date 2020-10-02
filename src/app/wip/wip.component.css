@@ -1,7 +1,7 @@
 img {
   position: absolute;
   width: 100vw;
-  height: auto;
+  height: calc(100vh - 60px); /* header height */
 }
 
 .over {
@@ -17,7 +17,7 @@ img {
   left: 50vw;
   transform: translateX(-50%);
   top: 10vh;
-  font-size: 40px;
+  font-size: 2vw;
   font-weight: 600;
 }
 
