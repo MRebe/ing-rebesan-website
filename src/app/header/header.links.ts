@@ -6,18 +6,23 @@ export class Link {
 
 export const links: Link[] = [
   {
+    label: 'Calcolo',
+    path: 'Calcolo',
+    isActive: false
+  },
+  {
     label: 'Progettazione',
     path: 'Progettazione',
     isActive: false
   },
   {
-    label: 'Rendering',
-    path: 'Rendering',
+    label: 'Render',
+    path: 'Render',
     isActive: false
   },
   {
-    label: 'Calcoli',
-    path: 'Calcoli',
+    label: 'Collaborazioni',
+    path: 'Collaborazioni',
     isActive: false
   },
   {

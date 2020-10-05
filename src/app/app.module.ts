@@ -15,6 +15,8 @@ import { MobileHomeComponent } from './mobile-home/mobile-home.component';
 import { MobileWipComponent } from './mobile-wip/mobile-wip.component';
 import { MobileHeaderComponent } from './mobile-header/mobile-header.component';
 import { MobileContactsComponent } from './mobile-contacts/mobile-contacts.component';
+import { CollaborationsComponent } from './collaborations/collaborations.component';
+import { MobileCollaborationsComponent } from './mobile-collaborations/mobile-collaborations.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { MobileContactsComponent } from './mobile-contacts/mobile-contacts.compo
     MobileHomeComponent,
     MobileWipComponent,
     MobileHeaderComponent,
-    MobileContactsComponent
+    MobileContactsComponent,
+    CollaborationsComponent,
+    MobileCollaborationsComponent
   ],
   imports: [
     BrowserModule,

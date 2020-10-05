@@ -1,19 +1,27 @@
-<img *ngIf="swapImg1" class="ir-mobile-img-template-img" [src]="swapImg1" [@fade]/>
-<img *ngIf="swapImg2" class="ir-mobile-img-template-img" [src]="swapImg2" [@fade]/>
+<div class="ir-mobile-home">
+  <img *ngIf="swapImg1" class="ir-mobile-home-img" [src]="swapImg1" [@fade]/>
+  <img *ngIf="swapImg2" class="ir-mobile-home-img" [src]="swapImg2" [@fade]/>
 
-<div *ngIf="swapImg1" class="ir-mobile-img-template-text" [@fade]>
-  <div class="ir-mobile-img-template-text-title" >
-    {{selectedTemplate.title}}
+  <div *ngIf="swapImg1" class="ir-mobile-home-text" [@fade]>
+    <div class="ir-mobile-home-text-title" >
+      {{selectedTemplate.title}}
+    </div>
+    <div class="ir-mobile-home-text-description">
+      {{selectedTemplate.description}}
+    </div>
   </div>
-  <div class="ir-mobile-img-template-text-description">
-    {{selectedTemplate.description}}
+  <div *ngIf="swapImg2" class="ir-mobile-home-text" [@fade]>
+    <div class="ir-mobile-home-text-title">
+      {{selectedTemplate.title}}
+    </div>
+    <div class="ir-mobile-home-text-description">
+      {{selectedTemplate.description}}
+    </div>
   </div>
 </div>
-<div *ngIf="swapImg2" class="ir-mobile-img-template-text" [@fade]>
-  <div class="ir-mobile-img-template-text-title">
-    {{selectedTemplate.title}}
-  </div>
-  <div class="ir-mobile-img-template-text-description">
-    {{selectedTemplate.description}}
-  </div>
-</div>
+
+<!--
+
+
+
+-->

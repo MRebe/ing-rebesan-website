@@ -1,0 +1,29 @@
+<div class="ir-collaborations">
+  <div class="ir-collaborations-background-gradient">
+    <div class="ir-collaborations-title">
+      Tutto compreso, fin nei più piccoli dettagli
+    </div>
+    <div class="ir-collaborations-text">
+      Una grande squadra a tua disposizione per rifinire nel migliore dei modi ogni tipo di lavoro
+    </div>
+
+    <div class="ir-collaborations-list">
+      <div *ngFor="let collaboratorsRow of collaboratorsMap;" class="ir-collaborations-list-row">
+        <div *ngFor="let collaborator of collaboratorsRow" class="ir-collaborations-list-item">
+          <a class="ir-collaborations-list-item-img" [href]="collaborator.link" target="_blank">
+            <img [src]="collaborator.logoPath" />
+          </a>
+          <div class="ir-collaborations-list-item-details">
+            <a class="ir-collaborations-list-item-details-name" [href]="collaborator.link" target="_blank">
+              {{collaborator.name}}
+            </a>
+            <div class="ir-collaborations-list-item-details-description">
+              {{collaborator.description}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

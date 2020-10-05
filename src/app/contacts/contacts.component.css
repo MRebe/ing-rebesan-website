@@ -1,94 +1,102 @@
 div {
-  display: flex;
+    display: flex;
 }
+
 .ir-contacts-background-img {
-  background-color: white;
-  background-image: url('./../../assets/images/contacts_bck.jpg');
-  background-position: 50% 50%;
-  background-size: cover;
-  width: 100vw;
-  height: calc(100vh - 60px); /* header height */
+    background-color: white;
+    background-image: url('./../../assets/images/contacts_bck.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100vw;
+    height: calc(100vh - 6vh);
+    /* header height */
 }
 
 .ir-contacts-background-gradient {
-  flex-direction: column;
-  flex: 1;
-  background: transparent;
-  background: linear-gradient(300deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 50%);
+    flex-direction: column;
+    width: 100vw;
+    background: transparent;
+    background: linear-gradient(300deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 50%);
 }
 
 .ir-contacts-title {
-  justify-content: center;
-  margin: 5vh 0;
-  font-size: 2.5vw;
-  font-weight: 500;
+    justify-content: center;
+    text-align: center;
+    margin: 4vh 0 2vh 0;
+    font-size: 2vw;
+    font-weight: 500;
 }
 
 .ir-contacts-text {
-  justify-content: center;
-  font-size: 1.5vw;
-  font-weight: 300;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.6vw;
+    font-weight: 300;
 }
 
 .ir-contacts-table {
-  flex-direction: column;
-  margin: 3vh 1.5vw;
+    flex-direction: column;
+    margin: 2vh 1.2vw;
 }
 
 .ir-contacts-name {
-  margin-bottom: 1.5vh;
-  font-size: 1.8vw;
-  font-weight: 500;
+    margin-bottom: 1.5vh;
+    font-size: 1.6vw;
+    font-weight: 500;
 }
 
 .ir-contacts-item-box {
-  justify-content: flex-start;
-  font-size: 1vw;
+    justify-content: flex-start;
+    font-size: 1.1vw;
+}
+
+.ir-contacts-item-box div {
+    margin: 0.5vh 0;
 }
 
 .ir-contacts-item-label {
-  margin: 5px;
-  flex: 1;
+    flex: 1;
 }
 
 .ir-contacts-item-value {
-  margin: 5px;
-  font-weight: 500;
-  flex: 10;
+    font-weight: 500;
+    flex: 10;
 }
 
 a {
-  text-decoration: inherit;
+    text-decoration: inherit;
 }
 
 .ir-additional-message {
-  font-size: 1vw;
-  margin-left: 1.5vw;
+    font-size: 0.9vw;
+    margin-left: 1.2vw;
 }
 
 .ir-contacts-footer {
-  position: absolute;
-  bottom: 0;
-  justify-content: space-between;
-  align-items: center;
-  height: 11vh;
-  width: 100vw;
-  font-size: 0.7vw;
-  font-weight: 200;
-  background-color: #444;
-  color: #fff;
+    position: absolute;
+    bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    font-size: 0.7vw;
+    font-weight: 200;
+    background-color: #444;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 0 1.2vw;
 }
 
 .ir-contacts-footer-item {
-  margin: 0 1.5vw;
-  flex-direction: column;
-  justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 6vh;
 }
 
 .ir-contacts-logo {
-  justify-content: center;
+    justify-content: center;
 }
 
 .ir-contacts-logo img {
-  height: 7vh;
+    height: 7vh;
 }

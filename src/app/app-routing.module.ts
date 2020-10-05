@@ -1,3 +1,4 @@
+import { CollaborationsComponent } from './collaborations/collaborations.component';
 import { MobileContactsComponent } from './mobile-contacts/mobile-contacts.component';
 import { MobileWipComponent } from './mobile-wip/mobile-wip.component';
 import { MobileHomeComponent } from './mobile-home/mobile-home.component';
@@ -8,6 +9,7 @@ import { WipComponent } from './wip/wip.component';
 import { BodyComponent } from './body/body.component';
 import { Injectable, NgModule } from '@angular/core';
 import { Router, Routes, RouterModule, CanActivate } from '@angular/router';
+import { MobileCollaborationsComponent } from './mobile-collaborations/mobile-collaborations.component';
 
 function isMobile(): boolean {
     let check = false;
@@ -81,12 +83,16 @@ const routes: Routes = [
         component: WipComponent,
       },
       {
-        path: 'Rendering',
+        path: 'Render',
         component: WipComponent,
       },
       {
-        path: 'Calcoli',
+        path: 'Calcolo',
         component: WipComponent,
+      },
+      {
+        path: 'Collaborazioni',
+        component: CollaborationsComponent,
       },
       {
         path: 'Contatti',
@@ -108,12 +114,16 @@ const routes: Routes = [
         component: MobileWipComponent,
       },
       {
-        path: 'Rendering',
+        path: 'Render',
         component: MobileWipComponent,
       },
       {
-        path: 'Calcoli',
+        path: 'Calcolo',
         component: MobileWipComponent,
+      },
+      {
+        path: 'Collaborazioni',
+        component: MobileCollaborationsComponent,
       },
       {
         path: 'Contatti',
