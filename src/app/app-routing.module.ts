@@ -1,3 +1,4 @@
+import { RenderComponent } from './render/render.component';
 import { CollaborationsComponent } from './collaborations/collaborations.component';
 import { MobileContactsComponent } from './mobile-contacts/mobile-contacts.component';
 import { MobileWipComponent } from './mobile-wip/mobile-wip.component';
@@ -84,7 +85,7 @@ const routes: Routes = [
       },
       {
         path: 'Render',
-        component: WipComponent,
+        component: RenderComponent,
       },
       {
         path: 'Calcolo',

@@ -1,0 +1,19 @@
+<div #scrollableDiv class="ir-render">
+  <div #vanishingDiv class="ir-vanishing-block">
+    <div class="ir-render-title">
+      Hai mai visitato un edificio che non esiste?
+    </div>
+    <div class="ir-render-subtitle">
+      Entra nella tua prossima casa, fatti un'idea degli spazi e di come apparirà grazie a strumenti di progettazione e rendering all'avanguardia.
+    </div>
+    <div class="ir-render-rights">
+      Autodesk Inc. - Autodesk, Maxon Computer - Cinema 4D e Chaos Czech - Corona Renderer sono marchi registrati. Tutti i diritti sono riservati.
+    </div>
+  </div>
+
+
+  <div #group *ngFor="let group of renderGroups" class="ir-render-group">
+    <img [src]="group.renderPaths[0]"/>
+  </div>
+
+</div>

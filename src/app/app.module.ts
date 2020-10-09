@@ -17,6 +17,7 @@ import { MobileHeaderComponent } from './mobile-header/mobile-header.component';
 import { MobileContactsComponent } from './mobile-contacts/mobile-contacts.component';
 import { CollaborationsComponent } from './collaborations/collaborations.component';
 import { MobileCollaborationsComponent } from './mobile-collaborations/mobile-collaborations.component';
+import { RenderComponent } from './render/render.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { MobileCollaborationsComponent } from './mobile-collaborations/mobile-co
     MobileHeaderComponent,
     MobileContactsComponent,
     CollaborationsComponent,
-    MobileCollaborationsComponent
+    MobileCollaborationsComponent,
+    RenderComponent
   ],
   imports: [
     BrowserModule,

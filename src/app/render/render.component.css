@@ -1,0 +1,63 @@
+div {
+  display: flex;
+}
+
+.ir-render {
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: calc(100vh - 6vh); /* Header height */
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.ir-vanishing-block {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ir-render-title {
+  justify-content: center;
+  text-align: center;
+  margin: 4vh 0 2vh 0;
+  font-size: 2vw;
+  font-weight: 500;
+}
+
+.ir-render-subtitle {
+  justify-content: center;
+  text-align: center;
+  margin: 0vh 0 2vh 0;
+  font-size: 1.6vw;
+  font-weight: 300;
+}
+
+.ir-render-rights {
+  justify-content: center;
+  text-align: center;
+  font-size: 0.5vw;
+}
+
+.ir-render-groups {
+  flex-direction: column;
+  margin-top: 30vh;
+}
+
+.ir-render-group {
+  position: relative;
+  flex-direction: column;
+  padding: 1vh 2vw;
+}
+
+.stick {
+  position: fixed;
+  top: 0;
+}
+
+.ir-render-group img {
+  width: 100%;
+  height: auto;
+}
+
