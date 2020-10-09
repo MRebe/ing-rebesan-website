@@ -3,11 +3,13 @@ import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, Vie
 
 import { Render } from './render.groups';
 import * as renders from './render.groups';
+import { fade } from 'src/animations';
 
 @Component({
   selector: 'app-render',
   templateUrl: './render.component.html',
-  styleUrls: ['./render.component.css']
+  styleUrls: ['./render.component.css'],
+  animations: [ fade]
 })
 export class RenderComponent implements OnInit, AfterViewInit {
 
@@ -22,8 +24,8 @@ export class RenderComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.renderGroups = renders.renderGroups;
     window.onscroll = () => {
-        console.log('scrolling');
-        // $('.ir-vanishing-block').css('opacity', 1 - $(window).scrollTop() / 250);
+      console.log('scrolling');
+      // $('.ir-vanishing-block').css('opacity', 1 - $(window).scrollTop() / 250);
     };
   }
 
@@ -36,8 +38,8 @@ export class RenderComponent implements OnInit, AfterViewInit {
     const height = vanishingElement.clientHeight;
 
     // Scrollover effect variables
-
     // http://jsfiddle.net/xtyus/1/
+    const groupsArray = this.groups.toArray().map(e => e.nativeElement);
     let originalsOffset = [];
 
 
@@ -48,23 +50,33 @@ export class RenderComponent implements OnInit, AfterViewInit {
       vanishingElement.style.opacity = newOpacity;
 
       // Scrollover effect code
-      const groupsArray = [...scrollableElement.children];
-      if (!originalsOffset.length){
+      if (!originalsOffset.length) {
         originalsOffset = groupsArray.map(e => e.offsetTop);
       }
 
       for (let i = 0; i < groupsArray.length; i++) {
         if (scrolled >= originalsOffset[i]) {
-          // if not contained
           groupsArray[i].classList.add('stick');
         } else {
           groupsArray[i].classList.remove('stick');
         }
       }
-
-
-
     };
   }
 
+  nextPhoto(group: Render): void {
+    if (group.selectedPhotoFade1 == group.renderPaths.length - 1) {
+      group.selectedPhotoFade1 = 0;
+    } else {
+      group.selectedPhotoFade1++;
+    }
+  }
+
+  previousPhoto(group: Render): void {
+    if (group.selectedPhotoFade1 == 0) {
+      group.selectedPhotoFade1 = group.renderPaths.length - 1;
+    } else {
+      group.selectedPhotoFade1--;
+    }
+  }
 }

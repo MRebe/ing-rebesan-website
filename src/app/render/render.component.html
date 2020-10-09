@@ -4,16 +4,30 @@
       Hai mai visitato un edificio che non esiste?
     </div>
     <div class="ir-render-subtitle">
-      Entra nella tua prossima casa, fatti un'idea degli spazi e di come apparirà grazie a strumenti di progettazione e rendering all'avanguardia.
+      Entra nella tua prossima casa, fatti un'idea degli spazi e di come apparirà grazie a strumenti di progettazione e
+      rendering all'avanguardia.
     </div>
     <div class="ir-render-rights">
-      Autodesk Inc. - Autodesk, Maxon Computer - Cinema 4D e Chaos Czech - Corona Renderer sono marchi registrati. Tutti i diritti sono riservati.
+      Autodesk Inc. - Autodesk, Maxon Computer - Cinema 4D e Chaos Czech - Corona Renderer sono marchi registrati. Tutti
+      i diritti sono riservati.
     </div>
   </div>
 
 
-  <div #group *ngFor="let group of renderGroups" class="ir-render-group">
-    <img [src]="group.renderPaths[0]"/>
+  <div class="ir-render-groups-container">
+    <ng-container *ngFor="let group of renderGroups">
+      <div class="ir-render-group-spacer"></div>
+      <div #group class="ir-render-group">
+        <img *ngIf="group.selectedPhotoFade1 != null" [src]="group.renderPaths[group.selectedPhotoFade1]" [@fade]/>
+        <img *ngIf="group.selectedPhotoFade2 != null" [src]="group.renderPaths[group.selectedPhotoFade2]" [@fade]/>
+        <div class="ir-render-group-arrow left" (click)="nextPhoto(group)">&lt;</div>
+        <div class="ir-render-group-arrow right" (click)="previousPhoto(group)">&gt;</div>
+        <div class="ir-render-group-detail">
+          <div class="ir-render-group-detail-project">{{group.project}}</div>
+          <div class="ir-render-group-detail-description">{{group.description}}</div>
+        </div>
+      </div>
+    </ng-container>
   </div>
 
 </div>

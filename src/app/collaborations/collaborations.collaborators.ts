@@ -13,7 +13,7 @@ export const collaborators: Collaborator[] = [
     link: 'https://www.energyitalyspa.it/'
   },
   {
-    logoPath: '',
+    logoPath: 'assets/images/collaborators/fontana_logo.jfif',
     name: 'F.lli Fontana Impresa Edile',
     description: '',
     link: 'https://ingrebesan-webapp.web.app'

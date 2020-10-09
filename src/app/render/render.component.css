@@ -13,9 +13,11 @@ div {
 }
 
 .ir-vanishing-block {
+  position: absolute;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  margin-top: 30vh; 
 }
 
 .ir-render-title {
@@ -40,24 +42,100 @@ div {
   font-size: 0.5vw;
 }
 
-.ir-render-groups {
+.ir-render-groups-container {
   flex-direction: column;
-  margin-top: 30vh;
+  align-items: center;
+  width: 99vw;
+}
+
+.ir-render-group-spacer {
+  width: 0;
+  height: calc(100vh - 6vh); /* header height */
+  float: left;
+  clear: both;
 }
 
 .ir-render-group {
   position: relative;
+  float: left;
   flex-direction: column;
-  padding: 1vh 2vw;
+  justify-content: flex-start;
+  align-items: center;
+  height: calc(100vh - 6vh); /* header height */
+  width: 100%;
+
+  background-color: #f2f2f2;
 }
 
-.stick {
+.ir-render-group.stick {
   position: fixed;
-  top: 0;
+  top: 6vh; /* header height */
+  left: 0vw;
+  width: 99vw;
+  z-index: -1;
+}
+
+.ir-render-group::after {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 6vh); /* header height */
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.3s ease-in-out;
+}
+.ir-render-group.stick::after {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .ir-render-group img {
-  width: 100%;
-  height: auto;
+  height: 75vh;
+  width: auto;
+  margin-top: 10vh;
 }
 
+.ir-render-group-detail {
+  position: absolute;
+  left: 0;
+  flex-direction: column;
+  margin: 1vh 2vw;
+  font-weight: 300;
+}
+
+.ir-render-group-detail-project {
+  font-size: 1.6vw;
+}
+
+.ir-render-group-detail-description {
+  font-size: 1.2vw;
+}
+
+.ir-render-group-arrow {
+  position: absolute;
+  justify-content: center;
+  top: 50vh;
+  transform: translateY(-50%) scaleX(0.5);
+  width: 5vw;
+  line-height: 6vh;
+  font-size: 5vw;
+  font-weight: 300;
+  cursor: pointer;
+  background-color: #ccc;
+  transition: 0.3s ease-in-out;
+}
+
+.ir-render-group-arrow:hover {
+  background-color: #888;
+  color: #fff
+}
+
+.ir-render-group.stick .ir-render-group-arrow {
+  opacity: 0;
+}
+
+.ir-render-group-arrow.left {
+  left: 2vw;
+}
+
+.ir-render-group-arrow.right {
+  right: 2vw;
+}
