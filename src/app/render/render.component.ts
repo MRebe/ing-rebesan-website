@@ -30,7 +30,7 @@ export class RenderComponent implements OnInit {
   }
 
   nextPhoto(): void {
-    if (this.selectedRenderIndex > this.selectedProject.rendersPaths.length - 1) {
+    if (this.selectedRenderIndex === this.selectedProject.rendersPaths.length - 1) {
       this.selectedRenderIndex = 0;
     } else {
       this.selectedRenderIndex++;

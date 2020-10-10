@@ -1,111 +1,135 @@
 div {
-  display: flex;
+    display: flex;
 }
 
 .ir-render {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .ir-render-title {
-  justify-content: center;
-  text-align: center;
-  margin: 4vh 0 2vh 0;
-  font-size: 2vw;
-  font-weight: 500;
+    justify-content: center;
+    text-align: center;
+    margin: 4vh 0 2vh 0;
+    font-size: 2vw;
+    font-weight: 500;
 }
 
 .ir-render-subtitle {
-  justify-content: center;
-  text-align: center;
-  margin: 0vh 0 2vh 0;
-  font-size: 1.6vw;
-  font-weight: 300;
+    justify-content: center;
+    text-align: center;
+    margin: 0vh 0 2vh 0;
+    font-size: 1.6vw;
+    font-weight: 300;
 }
 
 .ir-render-rights {
-  justify-content: center;
-  text-align: center;
-  font-size: 0.6vw;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.6vw;
+}
+
+.ir-render-presentation {
+    height: 70vh;
+    /* very difficult calculations*/
+    padding: 2vh 1vw;
 }
 
 .ir-render-selected-project {
-  position: relative;
-  justify-content: center;
-  width: 80vw;
-  height: 70vh; /* very difficult calculations*/
-  box-sizing: border-box;
-  padding: 2vh 1vw;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 80vw;
+    box-sizing: border-box;
+}
+
+.ir-render-selected-project-title {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    font-size: 1.6vw;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding: 1vh 1.2vw;
+    background: #000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    color: white;
 }
 
 .ir-render-selected-project img {
-  max-width: 100%;
-  max-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
-
 .ir-render-selected-project-arrow {
-  position: absolute;
-  justify-content: center;
-  top: 50%;
-  transform: translateY(-50%) scaleX(0.5);
-  width: 5vw;
-  line-height: 6vh;
-  font-size: 5vw;
-  font-weight: 300;
-  cursor: pointer;
-  background-color: #ccc;
-  transition: 0.3s ease-in-out;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%) scaleX(0.5);
+    width: 6vw;
+    height: 3vw;
+    /* border-radius: 50%; */
+    font-size: 5vw;
+    font-weight: 300;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: 0.3s ease-in-out;
 }
 
 .ir-render-selected-project-arrow:hover {
-  background-color: #888;
-  color: #fff
+    background-color: #888;
+    color: #fff
 }
 
 .ir-render-selected-project-arrow.left {
-  left: 2vw;
+    left: 2vw;
 }
 
 .ir-render-selected-project-arrow.right {
-  right: 2vw;
+    right: 2vw;
 }
 
-.ir-render-projects-list {
-  flex-direction: column;
-  width: 20vw;
-  margin: 0 1.2vw;
-  overflow-y: auto;
+.ir-render-project-list-container {
+    flex-direction: column;
+    margin: 0 1.2vw;
 }
 
 .ir-render-projects-list-title {
-  font-size: 1.5vw;
-  font-weight: 500;
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-bottom: 1vh;
+}
+
+.ir-render-projects-list {
+    flex-direction: column;
+    width: 20vw;
+    overflow-y: auto;
 }
 
 .ir-render-projects-list-project {
-  position: relative;
-  height: 25vh;
-  margin: 1vh 0;
+    position: relative;
+    height: 25vh;
+    margin: 1vh 0;
 }
 
-.ir-render-projects-list-project img{
-  max-width: 100%;
-  max-height: 100%;
+.ir-render-projects-list-project img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .ir-render-projects-list-project-details {
-  position: absolute;
-  flex-direction: column;
-  box-sizing: border-box;
-  padding: 0.4vh 0.3vw;
-  height: 100%;
-  width: 100%;
-  background: #fff;;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 100%);
-  cursor: pointer;
+    position: absolute;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0.4vh 0.3vw;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    cursor: pointer;
 }
 
 .ir-render-projects-list-project-details-name {
-  font-size: 1vw;
-  font-weight: 500;
+    font-size: 1vw;
+    font-weight: 500;
 }
