@@ -4,6 +4,8 @@ div {
 
 .ir-render {
     flex-direction: column;
+    height: calc(100vh - 6vh); /* header height */
+    overflow: auto;
 }
 
 .ir-render-title {
@@ -22,16 +24,10 @@ div {
     font-weight: 300;
 }
 
-.ir-render-rights {
-    justify-content: center;
-    text-align: center;
-    font-size: 0.6vw;
-}
-
 .ir-render-presentation {
     height: 70vh;
     /* very difficult calculations*/
-    padding: 2vh 1vw;
+    padding: 2vh 1.2vw;
 }
 
 .ir-render-selected-project {
@@ -89,27 +85,17 @@ div {
     right: 2vw;
 }
 
-.ir-render-project-list-container {
-    flex-direction: column;
-    margin: 0 1.2vw;
-}
-
-.ir-render-projects-list-title {
-    font-size: 1.5vw;
-    font-weight: 500;
-    margin-bottom: 1vh;
-}
-
 .ir-render-projects-list {
     flex-direction: column;
     width: 20vw;
+    margin: 0 1.2vw;
     overflow-y: auto;
 }
 
 .ir-render-projects-list-project {
     position: relative;
     height: 25vh;
-    margin: 1vh 0;
+    margin-bottom: 1vh;
 }
 
 .ir-render-projects-list-project img {
@@ -132,4 +118,71 @@ div {
 .ir-render-projects-list-project-details-name {
     font-size: 1vw;
     font-weight: 500;
+}
+
+.ir-render-programs {
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 1vh 1.2vw;
+}
+
+.ir-render-programs-title {
+    justify-content: center;
+    font-size: 2vw;
+    font-weight: 400;
+    margin-bottom: 1vh;
+}
+
+.ir-render-programs-list {
+    flex-direction: column;
+}
+
+.ir-render-program {
+    justify-content: center;
+}
+
+.ir-render-program-logo {
+    max-width: 20vw;
+    max-height: 30vh;
+}
+
+.ir-render-program-details {
+    flex-direction: column;
+    justify-content: center;
+    width: 30vw;
+    margin: 0 4.8vw;
+}
+
+.ir-render-program-name {
+    align-items: inherit;
+    text-align: inherit;
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin-bottom: 0.5vh;
+
+    text-decoration: none;
+    color: #333;
+}
+
+.ir-render-program-description {
+    align-items: inherit;
+    text-align: inherit;
+    font-size: 1.2vw;
+    font-weight: 300;
+}
+
+.ir-render-program.reverse{
+    flex-direction: row-reverse;
+}
+
+.ir-render-program.reverse .ir-render-program-details{
+    align-items: flex-end;
+    text-align: end;
+}
+
+.ir-render-rights {
+    justify-content: center;
+    text-align: center;
+    font-size: 0.6vw;
+    margin: 1vh 1.2vw;
 }

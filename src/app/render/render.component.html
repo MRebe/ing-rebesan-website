@@ -5,7 +5,6 @@
     <div class="ir-render-subtitle">
         Entra nella tua prossima casa, fatti un'idea degli spazi e di come apparirà grazie a strumenti di progettazione e creazione digitale d'avanguardia.
     </div>
-
     <div class="ir-render-presentation">
         <div class="ir-render-selected-project">
             <div class="ir-render-selected-project-title">{{selectedProject.name}}</div>
@@ -13,21 +12,44 @@
             <div class="ir-render-selected-project-arrow left" (click)="nextPhoto()">&lt;</div>
             <div class="ir-render-selected-project-arrow right" (click)="previousPhoto()">&gt;</div>
         </div>
-        <div class="ir-render-project-list-container">
-            <div class="ir-render-projects-list-title">Progetti</div>
-            <div class="ir-render-projects-list">
-                <div *ngFor="let project of projects" class="ir-render-projects-list-project" (click)="selectProject(project)">
-                    <img [src]="project.rendersPaths[0]">
-                    <div class="ir-render-projects-list-project-details">
-                        <div class="ir-render-projects-list-project-details-name">{{project.name}}</div>
-                    </div>
+        <div class="ir-render-projects-list">
+            <div *ngFor="let project of projects" class="ir-render-projects-list-project" (click)="selectProject(project)">
+                <img [src]="project.rendersPaths[0]">
+                <div class="ir-render-projects-list-project-details">
+                    <div class="ir-render-projects-list-project-details-name">{{project.name}}</div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="ir-render-programs">
+      <div class="ir-render-programs-title">
+        Ma... come?
+      </div>
+      <div class="ir-render-programs-list">
+        <div *ngFor="let program of programs; let odd=odd;" 
+          class="ir-render-program"
+          [ngClass]="{'reverse': odd}">
+          <a [href]="program.link" target="_blank">
+            <img class="ir-render-program-logo" [src]="program.iconPath">
+          </a>
+          <div class="ir-render-program-details">
+            <a class="ir-render-program-name" [href]="program.link" target="_blank">
+              {{program.name}}
+            </a>
+            <div class="ir-render-program-description">
+              {{program.description}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+
+    </div>
+
     <div class="ir-render-rights">
         Autodesk Inc. - Autodesk, Maxon Computer - Cinema 4D e Chaos Czech - Corona Renderer sono marchi registrati. Tutti i diritti sono riservati.
     </div>
-
 </div>
