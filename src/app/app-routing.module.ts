@@ -11,6 +11,7 @@ import { BodyComponent } from './body/body.component';
 import { Injectable, NgModule } from '@angular/core';
 import { Router, Routes, RouterModule, CanActivate } from '@angular/router';
 import { MobileCollaborationsComponent } from './mobile-collaborations/mobile-collaborations.component';
+import { MobileRenderComponent } from './mobile-render/mobile-render.component';
 
 function isMobile(): boolean {
     let check = false;
@@ -116,7 +117,7 @@ const routes: Routes = [
       },
       {
         path: 'Render',
-        component: MobileWipComponent,
+        component: MobileRenderComponent,
       },
       {
         path: 'Calcolo',

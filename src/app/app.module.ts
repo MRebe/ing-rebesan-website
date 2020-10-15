@@ -18,6 +18,7 @@ import { MobileContactsComponent } from './mobile-contacts/mobile-contacts.compo
 import { CollaborationsComponent } from './collaborations/collaborations.component';
 import { MobileCollaborationsComponent } from './mobile-collaborations/mobile-collaborations.component';
 import { RenderComponent } from './render/render.component';
+import { MobileRenderComponent } from './mobile-render/mobile-render.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { RenderComponent } from './render/render.component';
     MobileContactsComponent,
     CollaborationsComponent,
     MobileCollaborationsComponent,
-    RenderComponent
+    RenderComponent,
+    MobileRenderComponent
   ],
   imports: [
     BrowserModule,

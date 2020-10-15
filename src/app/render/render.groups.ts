@@ -5,12 +5,14 @@ export class Project {
 
 export const projects: Project[] = [
   {
-    name: 'Progetto Fontana',
+    name: 'Villetta residenziale unifamiliare',
     rendersPaths: [
+      'assets/images/render/Fontana_0.jpg',
       'assets/images/render/Fontana_1.jpg',
       'assets/images/render/Fontana_2.jpg',
       'assets/images/render/Fontana_3.jpg',
-      'assets/images/render/Fontana_4.jpg'
+      'assets/images/render/Fontana_4.jpg',
+      'assets/images/render/Fontana_3Mash.jpg'
     ]
   },
   {

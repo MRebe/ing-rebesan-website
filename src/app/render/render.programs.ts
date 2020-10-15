@@ -9,7 +9,7 @@ export const programs: Program[] = [
     {
         name: 'AllPlan',
         description: 'Programma per la progettazione di edifici o componenti meccanici e statici.',
-        iconPath: 'assets/images/programs/allplan_logo.png',
+        iconPath: 'assets/images/programs/allplan_logo.jpg',
         link: 'https://www.allplan.com/it/consulenza-e-vendita/allplan-italia/'},
     {
         name: 'Cinema 4D',
