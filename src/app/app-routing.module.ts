@@ -63,14 +63,10 @@ export class DesktopGuard implements CanActivate {
 const differentialRoutes: Routes = [
   { path: '',
     redirectTo: '/Home',
-    canActivate: [DesktopGuard],
-    pathMatch: 'full'
-  },
+    pathMatch: 'full' },
   { path: 'm',
     redirectTo: 'm/Home',
-    canActivate: [MobileGuard],
-    pathMatch: 'full'
-  },
+    pathMatch: 'full' },
   {
     path: '',
     component: BodyComponent,
@@ -140,9 +136,10 @@ const routes: Routes = [
   { path: '',
     pathMatch: 'full'
   }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MobileWipComponent } from './mobile-wip.component';
 
@@ -6,7 +6,7 @@ describe('MobileWipComponent', () => {
   let component: MobileWipComponent;
   let fixture: ComponentFixture<MobileWipComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MobileWipComponent ]
     })
