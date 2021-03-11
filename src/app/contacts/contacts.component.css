@@ -5,10 +5,10 @@ div {
 .ir-contacts-background-img {
     background-color: white;
     background-image: url('./../../assets/images/contacts_bck.jpg');
-    background-position: 50% 50%;
+    background-position: center center;
     background-size: cover;
     width: 100vw;
-    height: calc(100vh - 6vh);
+    height: calc(100vh - 60px);
     /* header height */
 }
 
@@ -22,36 +22,36 @@ div {
 .ir-contacts-title {
     justify-content: center;
     text-align: center;
-    margin: 4vh 0 2vh 0;
-    font-size: 2vw;
+    margin: 40px 20px 20px 20px;
+    font-size: 2rem;
     font-weight: 500;
 }
 
 .ir-contacts-text {
     justify-content: center;
     text-align: center;
-    font-size: 1.6vw;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
 .ir-contacts-table {
     flex-direction: column;
-    margin: 2vh 1.2vw;
+    margin: 20px;
 }
 
 .ir-contacts-name {
-    margin-bottom: 1.5vh;
-    font-size: 1.6vw;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
 .ir-contacts-item-box {
     justify-content: flex-start;
-    font-size: 1.1vw;
+    font-size: 1.2rem;
 }
 
 .ir-contacts-item-box div {
-    margin: 0.5vh 0;
+    margin: 10px 0;
 }
 
 .ir-contacts-item-label {
@@ -68,8 +68,8 @@ a {
 }
 
 .ir-additional-message {
-    font-size: 0.9vw;
-    margin-left: 1.2vw;
+    font-size: .9rem;
+    margin-left: 20px;
 }
 
 .ir-contacts-footer {
@@ -77,20 +77,20 @@ a {
     bottom: 0;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
+    height: 100px;
     width: 100vw;
-    font-size: 0.7vw;
+    font-size: .8rem;
     font-weight: 200;
     background-color: #444;
     color: #fff;
     box-sizing: border-box;
-    padding: 0 1.2vw;
+    padding: 0 20px;
 }
 
 .ir-contacts-footer-item {
     flex-direction: column;
     justify-content: space-between;
-    height: 6vh;
+    height: 60%;
 }
 
 .ir-contacts-logo {
@@ -98,5 +98,41 @@ a {
 }
 
 .ir-contacts-logo img {
-    height: 7vh;
+    height: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .ir-contacts-item-value {
+        flex: 6;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .ir-contacts-item-value {
+        flex: 4;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .ir-contacts-name {
+        margin-bottom: 10px;
+    }
+    .ir-contacts-item-box {
+        font-size: 1rem;
+    }
+    .ir-contacts-item-box div {
+        margin: 5px 0;
+    }
+    .ir-contacts-item-value {
+        flex: 2;
+    }
+    .ir-contacts-footer {
+        font-size: .6rem;
+        padding-bottom: 40px;
+    }
+    .ir-contacts-logo img {
+        max-height: 100%;
+        max-width: 80%;
+        object-fit: contain;
+    }
 }

@@ -4,139 +4,43 @@ div {
 
 .ir-render {
     flex-direction: column;
-    height: calc(100vh - 6vh); /* header height */
-    overflow: auto;
+    height: calc(100vh - 60px);
+    /* header height */
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .ir-render-title {
     justify-content: center;
     text-align: center;
-    margin: 4vh 0 2vh 0;
-    font-size: 2vw;
+    margin: 40px 20px 20px 20px;
+    font-size: 2rem;
     font-weight: 500;
 }
 
 .ir-render-subtitle {
     justify-content: center;
     text-align: center;
-    margin: 0vh 0 2vh 0;
-    font-size: 1.6vw;
+    font-size: 1.4rem;
     font-weight: 300;
-}
-
-.ir-render-presentation {
-    height: 70vh;
-    /* very difficult calculations*/
-    padding: 2vh 1.2vw;
-}
-
-.ir-render-selected-project {
-    position: relative;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 80vw;
-    box-sizing: border-box;
-}
-
-.ir-render-selected-project-title {
-    position: absolute;
-    width: 100%;
-    height: 10%;
-    font-size: 1.6vw;
-    font-weight: 500;
-    box-sizing: border-box;
-    padding: 1vh 1.2vw;
-    background: #000;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    color: white;
-}
-
-.ir-render-selected-project img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-.ir-render-selected-project-arrow {
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    top: 50%;
-    transform: translateY(-50%) scaleX(0.5);
-    width: 6vw;
-    height: 3vw;
-    /* border-radius: 50%; */
-    font-size: 5vw;
-    font-weight: 300;
-    cursor: pointer;
-    background-color: #ccc;
-    transition: 0.3s ease-in-out;
-}
-
-.ir-render-selected-project-arrow:hover {
-    background-color: #888;
-    color: #fff
-}
-
-.ir-render-selected-project-arrow.left {
-    left: 2vw;
-}
-
-.ir-render-selected-project-arrow.right {
-    right: 2vw;
-}
-
-.ir-render-projects-list {
-    flex-direction: column;
-    width: 20vw;
-    margin: 0 1.2vw;
-    overflow-y: auto;
-}
-
-.ir-render-projects-list-project {
-    position: relative;
-    height: 25vh;
-    margin-bottom: 1vh;
-}
-
-.ir-render-projects-list-project img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-.ir-render-projects-list-project-details {
-    position: absolute;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 0.4vh 0.3vw;
-    height: 100%;
-    width: 100%;
-    background: #fff;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 100%);
-    cursor: pointer;
-}
-
-.ir-render-projects-list-project-details-name {
-    font-size: 1vw;
-    font-weight: 500;
 }
 
 .ir-render-programs {
     flex-direction: column;
     box-sizing: border-box;
-    padding: 1vh 1.2vw;
+    padding: 10px 20px;
 }
 
 .ir-render-programs-title {
     justify-content: center;
-    font-size: 2vw;
+    font-size: 1.8rem;
     font-weight: 400;
-    margin: 4vh 0 2vh 0;
+    margin: 20px;
 }
 
 .ir-render-programs-list {
     flex-direction: column;
+    overflow: hidden;
 }
 
 .ir-render-program {
@@ -144,25 +48,24 @@ div {
 }
 
 .ir-render-program-logo {
-    max-width: 15vw;
-    max-height: 20vh;
+    max-width: 300px;
+    max-height: 300px;
     object-fit: contain;
 }
 
 .ir-render-program-details {
     flex-direction: column;
     justify-content: center;
-    width: 30vw;
-    margin: 0 4.8vw;
+    width: 30%;
+    margin: 0 50px;
 }
 
 .ir-render-program-name {
     align-items: inherit;
     text-align: inherit;
-    font-size: 1.4vw;
+    font-size: 1.6rem;
     font-weight: 500;
-    margin-bottom: 0.5vh;
-
+    margin-bottom: 20px;
     text-decoration: none;
     color: #333;
 }
@@ -170,22 +73,97 @@ div {
 .ir-render-program-description {
     align-items: inherit;
     text-align: inherit;
-    font-size: 1.2vw;
+    font-size: 1.2rem;
     font-weight: 300;
 }
 
-.ir-render-program.reverse{
+.ir-render-program.ir-render-reverse {
     flex-direction: row-reverse;
 }
 
-.ir-render-program.reverse .ir-render-program-details{
+.ir-render-program.ir-render-reverse .ir-render-program-details {
     align-items: flex-end;
     text-align: end;
 }
 
 .ir-render-rights {
     justify-content: center;
-    text-align: center;
-    font-size: 0.6vw;
-    margin: 1vh 1.2vw;
+    align-items: center;
+    font-size: .8rem;
+    padding: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.ir-render-rights-text {
+    position: relative;
+}
+
+.ir-comparison {
+    position: relative;
+    margin-top: 50px;
+    padding-bottom: 50%
+}
+
+.ir-cormparison-image {
+    width: 100%;
+    height: 100%;
+}
+
+.ir-cormparison-image.ir-cormparison-image-after {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    transform: translate(100%, 0px);
+}
+
+.ir-cormparison-image.ir-cormparison-image-after img {
+    transform: translate(-100%, 0px);
+}
+
+.ir-cormparison-image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+    .ir-render-program-logo {
+        max-width: 200px;
+        max-height: 200px;
+    }
+    .ir-render-program-details {
+        width: 50%
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .ir-render-program-logo {
+        max-width: 150px;
+        max-height: 150px;
+    }
+    .ir-render-rights {
+        font-size: .7rem;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .ir-render-program {
+        flex-direction: column !important;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .ir-render-rights {
+        text-align: center;
+        padding: 20px;
+    }
+    .ir-render-program-details {
+        align-items: center !important;
+    }
+    .ir-render-program-name,
+    .ir-render-program-description {
+        text-align: center !important;
+    }
 }

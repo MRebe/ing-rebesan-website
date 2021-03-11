@@ -1,23 +1,27 @@
-img {
-  position: absolute;
-  width: 100vw;
-  height: calc(100vh - 6vh); /* header height */
+.background {
+    background-color: white;
+    background-image: url('./../../assets/images/wip.jpg');
+    background-position: center center;
+    background-size: cover;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    /* header height */
 }
 
 .over {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background: transparent;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 30%, rgba(255, 255, 255, 1) 100%);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 30%, rgba(255, 255, 255, 1) 100%);
 }
 
 .text {
-  position: absolute;
-  left: 50vw;
-  transform: translateX(-50%);
-  top: 16vh;
-  font-size: 2vw;
-  font-weight: 500;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
 }
-

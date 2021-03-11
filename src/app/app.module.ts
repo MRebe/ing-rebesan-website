@@ -19,6 +19,7 @@ import { CollaborationsComponent } from './collaborations/collaborations.compone
 import { MobileCollaborationsComponent } from './mobile-collaborations/mobile-collaborations.component';
 import { RenderComponent } from './render/render.component';
 import { MobileRenderComponent } from './mobile-render/mobile-render.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { MobileRenderComponent } from './mobile-render/mobile-render.component';
     CollaborationsComponent,
     MobileCollaborationsComponent,
     RenderComponent,
-    MobileRenderComponent
+    MobileRenderComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,

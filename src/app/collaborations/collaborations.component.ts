@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { gsap } from 'gsap';
 
 import { Collaborator } from './collaborations.collaborators';
 import * as collaboratorsList from './collaborations.collaborators';
@@ -8,30 +9,27 @@ import * as collaboratorsList from './collaborations.collaborators';
   templateUrl: './collaborations.component.html',
   styleUrls: ['./collaborations.component.css']
 })
-export class CollaborationsComponent implements OnInit {
+export class CollaborationsComponent implements OnInit, AfterViewInit {
 
-  collaboratorsMap: Collaborator[][];
-  COLUMNS = 4;
+  collaborators: Collaborator[];
 
   constructor() { }
 
   ngOnInit(): void {
-    const collaborators = collaboratorsList.collaborators;
-    // split in rows
+    this.collaborators = collaboratorsList.collaborators;
+  }
 
-    this.collaboratorsMap = [];
+  ngAfterViewInit(): void {
+    const from = {opacity: 0};
+    const to = {opacity: 1, duration: .7, delay: .2};
 
-    A: for (let row = 0; ; row++) {
-      this.collaboratorsMap[row] = []
-      for (let column = 0; column < this.COLUMNS; column++) {
-        const nextIndex = this.COLUMNS*row + column;
-        if (nextIndex >= collaborators.length) {
-          break A;
-        }
-        this.collaboratorsMap[row][column] = collaborators[nextIndex];
-      }
+    gsap.fromTo('.ir-collaborations-title', from, to);
+    gsap.fromTo('.ir-collaborations-text', from, to);
+    if (window.innerWidth > 600) {
+      gsap.fromTo('.ir-collaborations-list-item', {top: '-200px', opacity: 0}, {top: 0, opacity: 1, duration: 1, stagger: .3})
+    } else {
+      gsap.fromTo('.ir-collaborations-list-item', {left: '-200px', opacity: 0}, {left: 0, opacity: 1, duration: 1, stagger: .3})
     }
-    
   }
 
 }

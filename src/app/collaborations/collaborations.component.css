@@ -7,10 +7,10 @@ a {
 .ir-collaborations {
     background-color: white;
     background-image: url('./../../assets/images/collaborations_bck.jpg');
-    background-position: 50% 50%;
+    background-position: center center;
     background-size: cover;
     width: 100vw;
-    height: calc(100vh - 6vh);
+    height: calc(100vh - 60px);
     /* header height */
 }
 
@@ -23,60 +23,77 @@ a {
 
 .ir-collaborations-title {
     justify-content: center;
-    margin: 4vh 0 2vh 0;
-    font-size: 2vw;
+    text-align: center;
+    margin: 40px 20px 20px 20px;
+    font-size: 2rem;
     font-weight: 500;
 }
 
 .ir-collaborations-text {
     justify-content: center;
-    font-size: 1.6vw;
+    text-align: center;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
 .ir-collaborations-list {
-    flex-direction: column;
-    align-items: center;
-    margin: 8vh 1.2vw 2vh 1.2vw;
-}
-
-.ir-collaborations-list-row {
-    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
+    margin: 80px 20px;
+    overflow: auto;
 }
 
 .ir-collaborations-list-item {
+    position: relative;
     flex-direction: column;
-    width: 22vw;
-    margin: 1vh 0.5vw;
+    min-width: 200px;
+    margin: 0 20px;
+    flex: 1;
 }
 
 .ir-collaborations-list-item-img {
     justify-content: center;
-    height: 11vh;
-    padding: 2vh 1vw;
-    box-sizing: border-box;
+    height: 100px;
+    padding: 20px 0;
     border-bottom: 1px solid gray;
 }
 
 .ir-collaborations-list-item-img img {
-    width: auto;
-    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .ir-collaborations-list-item-details {
     flex-direction: column;
     box-sizing: border-box;
-    padding: 1vh 1vw;
+    padding: 10px;
 }
 
 .ir-collaborations-list-item-details-name {
     color: black;
-    margin-bottom: 1vh;
-    font-size: 1.6vw;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
     font-weight: 500;
 }
 
 .ir-collaborations-list-item-details-description {
-    font-size: 1vw;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .ir-collaborations-list {
+        margin: 40px 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .ir-collaborations-list {
+        margin: 20px;
+    }
+    .ir-collaborations-list-item-details-name,
+    .ir-collaborations-list-item-details-description {
+        display: block;
+        text-align: center;
+    }
 }

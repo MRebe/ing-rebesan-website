@@ -1,1 +1,21 @@
-<router-outlet></router-outlet>
+<nav>
+    <ul class="ir-desktop-nav">
+        <li *ngFor="let link of links" class="ir-nav-item" [ngClass]="{'active': link.isActive}" (click)="redirectTo(link)">
+            {{link.label}}
+        </li>
+    </ul>
+
+    <div class="ir-mobile-menu" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="ir-nav-logo" (click)="redirectTo(null)">
+        <img src="assets/images/logo_small.jpg" />
+    </div>
+
+</nav>
+<div class="ir-content">
+    <router-outlet></router-outlet>
+</div>

@@ -12,6 +12,8 @@ import { Injectable, NgModule } from '@angular/core';
 import { Router, Routes, RouterModule, CanActivate } from '@angular/router';
 import { MobileCollaborationsComponent } from './mobile-collaborations/mobile-collaborations.component';
 import { MobileRenderComponent } from './mobile-render/mobile-render.component';
+import { AppComponent } from './app.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 function isMobile(): boolean {
     let check = false;
@@ -134,12 +136,42 @@ const differentialRoutes: Routes = [
 
 const routes: Routes = [
   { path: '',
+    redirectTo: '/Home',
     pathMatch: 'full'
+  },
+  {
+    path: '',
+    children: [
+      {
+        path: 'Home',
+        component: HomepageComponent
+      },
+      {
+        path: 'Calcolo',
+        component: WipComponent
+      },
+      {
+        path: 'Progettazione',
+        component: WipComponent
+      },
+      {
+        path: 'Render',
+        component: RenderComponent
+      },
+      {
+        path: 'Collaborazioni',
+        component: CollaborationsComponent
+      },
+      {
+        path: 'Contatti',
+        component: ContactsComponent
+      }
+    ]
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
