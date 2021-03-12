@@ -1,29 +1,10 @@
-<img class="ir-home-logo-big" src="assets/images/logo_big_alpha.png"/>
-
-<div class="ir-home">
-
-  <img class="ir-home-background-photo" *ngIf="swapImg1" [src]="swapImg1" [@fade]/>
-  <img class="ir-home-background-photo" *ngIf="swapImg2" [src]="swapImg2" [@fade]/>
-
-  <div class="ir-home-tilted-box" [@fade]></div>
-
-  <div *ngIf="swapImg1" class="ir-home-text-container" [@fade]>
-    <div class="ir-home-title">{{selectedTemplate.title}}</div>
-    <div class="ir-home-description">{{selectedTemplate.description}}</div>
-  </div>
-  <div *ngIf="swapImg2" class="ir-home-text-container" [@fade]>
-    <div class="ir-home-title">{{selectedTemplate.title}}</div>
-    <div class="ir-home-description">{{selectedTemplate.description}}</div>
-  </div>
-
-  <div class="ir-home-paginator">
-    <div
-      *ngFor="let t of [].constructor(templatesNumber); let i = index"
-      class="ir-home-paginator-item"
-      [ngClass]="{'ir-home-paginator-item-active': currentTemplateIndex === i}"
-      (click)="switchTemplate(i)"
-      [@fade]>
+<section>
+    <img class="ir-overlay-logo-big" src="assets/images/logo_big_alpha.png" alt="">
+    <div *ngFor="let section of sections; let index = index" class="ir-overlay" [ngClass]="index % 2 === 0 ? 'ir-overlay-even' : 'ir-overlay-odd'">
+        <img [src]="section.imagePath" alt="">
+        <div class="ir-overlay-info" [ngClass]="index % 2 === 0 ? 'ir-overlay-even' : 'ir-overlay-odd'">
+            <div class="ir-overlay-title">{{section.title}}</div>
+            <div class="ir-overlay-description">{{section.description}}</div>
+        </div>
     </div>
-  </div>
-
-</div>
+</section>

@@ -1,80 +1,117 @@
-.ir-home {
-  position: relative;
-  width: 100vw;
-  height: calc(100vh - 6vh); /* header height */
+section {
+    position: relative;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.ir-home-background-photo {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+img.ir-overlay-logo-big {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: auto;
+    width: 400px;
+    padding: 2vh 1.2vw 2vh 2.4vw;
+    background: rgb(255, 255, 255);
+    z-index: 1;
 }
 
-.ir-home-logo-big {
-  position: absolute;
-  top: 8vh;
-  left: 0;
-  display: block;
-  height: auto;
-  width: 18vw;
-  padding: 2vh 1.2vw 2vh 2.4vw;
-  background:  rgb(255, 255, 255);
-  z-index: 1;
+div.ir-overlay {
+    width: 100vw;
+    height: calc(100vh - 60px);
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.ir-home-text-container {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 36vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  color: rgb(255, 255, 255);
-  margin: 0 1.2vw 5vh 0;
-
-  font-size: 2vw;
+div.ir-overlay img {
+    min-width: 100vw;
+    min-height: 100%;
+    object-fit: cover;
 }
 
-.ir-home-text-container .ir-home-title {
-  margin-bottom: 2vh;
+.ir-overlay-info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 50vw;
+    padding: 50px;
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(8px);
 }
 
-.ir-home-text-container .ir-home-description {
-  font-size: 1.4vw;
-  font-weight: 200;
+.ir-overlay-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.ir-home-paginator {
-  display: flex;
-  position: absolute;
-  align-items: center;
-  bottom: 1vh;
-  left: 50vw;
-  transform: translateX(-50%);
-  height: 1.7vh;
-  border-radius: 0.8vh;
-  background-color: rgba(0, 0, 0, 0);
+.ir-overlay-description {
+    font-size: 1.5rem;
+    font-weight: 300;
+    width: 35vw;
 }
 
-.ir-home-paginator-item {
-  height: 0.4vh;
-  width: 4vh;
-  margin: 0vh 0.6vw;
-  background-color: rgba(100, 100, 100, 1);
-  cursor: pointer;
-  transition: 300ms 300ms ease-in-out;
+.ir-overlay-even.ir-overlay-info {
+    /*destra*/
+    right: 0px;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 60% 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, .2));
+    align-items: flex-end;
 }
 
-.ir-home-paginator-item-active {
-  background-color: rgb(255, 255, 255);
+.ir-overlay-odd.ir-overlay-info {
+    /*sinistra*/
+    left: 0px;
+    clip-path: polygon(0 0, 90% 0, 60% 100%, 0% 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, .2));
 }
 
-.ir-home-tilted-box {
-  position: absolute;
-  width: 60vw;
-  height: 140vh;
-  background: rgb(0,0,0);
-  background: linear-gradient(-10deg, rgba(0,0,0,1) 35%, rgba(255,255,255,0) 85%);
-  transform: translate(105%, -8%) rotate(20deg);
+.ir-overlay-even.ir-overlay-info .ir-overlay-title,
+.ir-overlay-even.ir-overlay-info .ir-overlay-description {
+    text-align: right;
+}
+
+@media only screen and (max-width: 1200px) {
+    .ir-overlay-info {
+        width: 100vw;
+    }
+    .ir-overlay-description {
+        width: 50vw;
+    }
+    .ir-overlay-even.ir-overlay-info {
+        /*destra*/
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 80%);
+    }
+    .ir-overlay-odd.ir-overlay-info {
+        /*sinistra*/
+        clip-path: polygon(0 0, 100% 0, 0 100%, 0% 80%);
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    img.ir-overlay-logo-big {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .ir-overlay-even.ir-overlay-info,
+    .ir-overlay-odd.ir-overlay-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        clip-path: unset;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, .0) 50%);
+        backdrop-filter: unset;
+    }
+    .ir-overlay-even.ir-overlay-info .ir-overlay-title,
+    .ir-overlay-even.ir-overlay-info .ir-overlay-description {
+        width: 80vw;
+        text-align: center;
+    }
 }
