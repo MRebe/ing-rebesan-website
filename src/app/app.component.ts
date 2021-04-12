@@ -56,7 +56,7 @@ export class AppComponent implements AfterViewInit, OnInit {
     const tl = gsap.timeline();
     if (window.innerWidth > 600) {
       tl.set('nav .ir-mobile-menu', { top: 0 });
-      tl.to('nav ul li', { top: 0, delay: .2, stagger: .2, duration: .5 });
+      tl.to('nav li', { top: 0, delay: .2, stagger: .2, duration: .5 });
     } else {
       //tl.set('nav ul li', { top: 0 });
       tl.to('nav .ir-mobile-menu', { top: 0, delay: .2, stagger: .2, duration: .5 });
@@ -86,9 +86,9 @@ export class AppComponent implements AfterViewInit, OnInit {
       gsap.to('.ir-desktop-nav', {width: '0', duration:.5});
     } else {
       this.mobileMenuOpen = true;
-      gsap.set('nav ul li', {opacity: 0});
+      gsap.set('nav li', {opacity: 0});
       gsap.to('.ir-desktop-nav', {width: 'auto', delay: .3, duration:.3});
-      gsap.fromTo('nav ul li', {left: '-150px'}, { left: 0, opacity: 1, delay: .2, stagger: .2, duration: .3 });
+      gsap.fromTo('nav li', {left: '-150px'}, { left: 0, opacity: 1, delay: .2, stagger: .2, duration: .3 });
     }
   }
 

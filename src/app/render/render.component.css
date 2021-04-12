@@ -102,7 +102,7 @@ div {
 .ir-comparison {
     position: relative;
     margin-top: 50px;
-    padding-bottom: 50%
+    padding-bottom: 48%
 }
 
 .ir-cormparison-image {
@@ -126,6 +126,7 @@ div {
     height: 100%;
     position: absolute;
     top: 0;
+    object-fit: contain;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -165,5 +166,9 @@ div {
     .ir-render-program-name,
     .ir-render-program-description {
         text-align: center !important;
+    }
+    .ir-comparison {
+        margin-top: 30px;
+        padding-bottom: 90%
     }
 }

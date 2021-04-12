@@ -4,17 +4,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BodyComponent } from './body/body.component';
 import { WipComponent } from './wip/wip.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HomeComponent } from './home/home.component';
 import { CollaborationsComponent } from './collaborations/collaborations.component';
 import { RenderComponent } from './render/render.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BodyComponent,
     WipComponent,
     ContactsComponent,
     HomeComponent,
@@ -24,7 +23,8 @@ import { RenderComponent } from './render/render.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   bootstrap: [AppComponent]
 })

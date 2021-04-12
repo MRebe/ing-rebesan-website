@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', 'Raleway', sans-serif;
+    -webkit-overflow-scrolling: touch;
 }
 
 body {

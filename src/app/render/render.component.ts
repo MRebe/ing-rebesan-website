@@ -1,4 +1,4 @@
-import { AfterContentInit, AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -15,6 +15,9 @@ export class RenderComponent implements OnInit, AfterViewInit, OnDestroy {
   scrollerClassSelector = '.ir-render';
   programs: Program[];
 
+  imagePathBefore = 'assets/images/quadri_bn.jpg';
+  imagePathAfter = 'assets/images/quadri.jpg';
+
   timelines = [];
   scrollTriggers = [];
 
@@ -22,6 +25,12 @@ export class RenderComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.programs = programs.programs;
+
+    if (window.innerWidth <= 600) {
+      this.imagePathBefore = 'assets/images/galleria_quadrato_bn.jpg';
+      this.imagePathAfter = 'assets/images/galleria_quadrato.jpg';
+    }
+
     gsap.delayedCall(1, () => ScrollTrigger.refresh());
   }
 
