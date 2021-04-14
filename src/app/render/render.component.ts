@@ -15,8 +15,8 @@ export class RenderComponent implements OnInit, AfterViewInit, OnDestroy {
   scrollerClassSelector = '.ir-render';
   programs: Program[];
 
-  imagePathBefore = 'assets/images/quadri_bn.jpg';
-  imagePathAfter = 'assets/images/quadri.jpg';
+  imagePathBefore = 'assets/images/slide_big_before.jpg';
+  imagePathAfter = 'assets/images/slide_big_after.jpg';
 
   timelines = [];
   scrollTriggers = [];
@@ -27,8 +27,8 @@ export class RenderComponent implements OnInit, AfterViewInit, OnDestroy {
     this.programs = programs.programs;
 
     if (window.innerWidth <= 600) {
-      this.imagePathBefore = 'assets/images/galleria_quadrato_bn.jpg';
-      this.imagePathAfter = 'assets/images/galleria_quadrato.jpg';
+      this.imagePathBefore = 'assets/images/slide_small_before.jpg';
+      this.imagePathAfter = 'assets/images/slide_samll_after.jpg';
     }
 
     gsap.delayedCall(1, () => ScrollTrigger.refresh());
